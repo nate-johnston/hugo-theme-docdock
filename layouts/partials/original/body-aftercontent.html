@@ -1,3 +1,5 @@
+<!-- BEGIN body-aftercontent -->
+
     {{ partial "custom-content-footer.html" . }}
   </div>
 </div>
@@ -15,3 +17,4 @@
 
 {{ $concatjs := slice $layoutsPartialsMenu | resources.Concat "js/scripts.js" | resources.Minify }}
 <script src="{{ $concatjs.Permalink }}"></script>
+<!-- END body-aftercontent -->

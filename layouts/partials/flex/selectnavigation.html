@@ -1,3 +1,5 @@
+<!-- BEGIN selectnavigation -->
+
 {{- $currentNode := . }}
 {{- if eq .Site.Params.ordersectionsby "title"}}
   {{- range .Site.Home.Sections.ByTitle}}
@@ -56,3 +58,5 @@
   {{- end}}
  {{- end}}
 {{- end}}
+
+<!-- END selectnavigation -->

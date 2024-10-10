@@ -1,3 +1,4 @@
+<!-- BEGIN breadcrumb -->
 {{define "breadcrumb"}}
 {{ if .page.Parent}}
 {{$value := (printf "<a href='%s'>%s</a> > %s" .page.Parent.Permalink .page.Parent.Title .value)}}
@@ -6,3 +7,4 @@
  {{.value|safeHTML}}
 {{end}}
 {{end}}
+<!-- END breadcrumb -->
