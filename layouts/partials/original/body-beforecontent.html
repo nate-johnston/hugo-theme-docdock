@@ -66,14 +66,16 @@
     {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
       {{ $File := .File }}
       {{ $Site := .Site }}
-      {{with $File.Path }}
+      {{if $File.Path}}
+          {{with $File.Path }}
     <div id="top-github-link">
       <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
         <i class="fa fa-code-fork"></i>
         {{T "Edit-this-page"}}
       </a>
     </div>
-      {{- end }}
+          {{- end }}
+      {{end }}
     {{- end -}}
 
     <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
